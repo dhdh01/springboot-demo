@@ -28,7 +28,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 sh "docker rm -f ${CONTAINER_NAME} || true"
-                sh "docker run -d --name ${CONTAINER_NAME} -p 8080:8080 ${IMAGE_NAME}"
+                sh "docker run -d --name ${CONTAINER_NAME} -p 8081:8080 ${IMAGE_NAME}"
             }
         }
     }
